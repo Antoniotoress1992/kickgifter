@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlGoShopping"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff">
+	     <RelativeLayout
+            android:id="@+id/menuPanelBackContact"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/blue_bg" >
+
+             <RelativeLayout 
+		        android:id="@+id/menuPanelBack"
+		        android:layout_width="50dp"
+		        android:layout_height="50dp"
+		        android:background="@drawable/blue_bg">
+		         <ImageView
+			       android:id="@+id/img_phone_number1"
+			       android:layout_width="20dp"
+			       android:layout_height="20dp"
+			       android:layout_centerVertical="true"
+			       android:layout_marginLeft="15dp"
+			       android:background="@drawable/back_button" />
+		    </RelativeLayout>
+		     <TextView
+		           android:layout_width="wrap_content"
+		           android:layout_height="wrap_content"
+		           android:layout_centerVertical="true"
+		           android:layout_centerHorizontal="true"
+		           android:text="@string/title_shopping"
+		           android:textSize="18dp"
+		           android:textColor="#ffffff"/>
+    	</RelativeLayout>
+    	<RelativeLayout
+		    android:id="@+id/btnPanelAvailable"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:background="#ffffff" 
+		    android:layout_centerInParent="true"
+		    android:layout_below="@+id/menuPanelBackContact"
+		    android:paddingTop="10dp">
+			<TextView
+			   	android:id="@+id/txt_gift_availble"
+			   	android:layout_width="wrap_content"
+			   	android:layout_height="wrap_content"
+			   	android:textColor="#000000"
+			   	android:textSize="18dp"
+			   	android:layout_centerVertical="true"
+			   	android:text="@string/title_available_amount"
+			   	android:gravity="center"
+			   	android:layout_marginTop="2dp" />
+			<TextView
+			   	android:id="@+id/edt_gift_availble"
+			   	android:layout_width="wrap_content"
+			   	android:layout_height="wrap_content"
+			   	android:textColor="#000000"
+			   	android:textSize="20sp"
+			   	android:layout_centerVertical="true"
+			   	android:text=""
+			   	android:layout_marginLeft="10dp"
+			   	android:gravity="center"
+			   	android:layout_marginTop="2dp" 
+			   	android:layout_toRightOf="@+id/txt_gift_availble" />
+			
+		</RelativeLayout>
+		<RelativeLayout 
+		        android:id="@+id/btnPanel"
+		        android:layout_width="wrap_content"
+		        android:layout_height="40dp"
+		        android:background="#ffffff" 
+		        android:layout_centerInParent="true"
+		        android:layout_marginBottom="20dp"
+		        android:layout_below = "@+id/btnPanelAvailable" >
+		        <Button
+		             android:id="@+id/btnSubmitGift"
+		             android:layout_width="150dp"
+		             android:layout_height="40dp"
+		             android:layout_centerVertical="true"
+		             android:text="@string/title_deliverToMe" 
+		             android:textSize="15dp"
+		             android:textColor="@color/white"
+		             android:gravity="right|center_vertical"
+		             android:paddingRight="20dp"
+		             android:background="@drawable/button_click" />
+				 <ImageView
+		            android:id="@+id/imgSubmitGift"
+		            android:layout_width="20dp"
+		            android:layout_height="20dp"
+		            android:background="@drawable/buy" 
+		            android:layout_marginLeft="5dp"
+		            android:layout_centerVertical="true"/>
+				 <Button
+		             android:id="@+id/btnSubmitChoose"
+		             android:layout_width="150dp"
+		             android:layout_height="40dp"
+		             android:layout_centerVertical="true"
+		             android:text="@string/title_deliverToOther" 
+		             android:textSize="15dp"
+		             android:textColor="@color/white"
+		             android:gravity="right|center_vertical"
+		             android:layout_toRightOf="@+id/btnSubmitGift"
+		             android:paddingRight="5dp"
+		             android:layout_marginLeft="10dp"
+		             android:background="@drawable/button_click" />
+				 <ImageView
+		            android:id="@+id/imgSubmitChoose"
+		            android:layout_width="20dp"
+		            android:layout_height="20dp"
+		            android:background="@drawable/kg_logo" 
+		            android:layout_toRightOf="@+id/btnSubmitGift"
+		            android:layout_marginLeft="15dp"
+		            android:layout_centerVertical="true"/>
+		</RelativeLayout>
+		<RelativeLayout
+		    android:id="@+id/btnPanelList"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:background="#ffffff" 
+		    android:layout_centerInParent="true"
+		    android:layout_below="@+id/btnPanel">
+		
+			<ListView
+			    android:id="@+id/listGift"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_alignParentBottom="true"
+			    android:layout_alignParentLeft="true" />
+			
+		</RelativeLayout>
+		
+ </RelativeLayout>

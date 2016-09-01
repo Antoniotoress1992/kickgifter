@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/rlProjectList" 
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:background="#ffffff"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@+id/rl_top1_projectList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp" 
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+	     <TextView
+		   	android:id="@+id/txt_invitor_tel"
+		   	android:layout_width="fill_parent"
+		   	android:layout_height="wrap_content"
+		   	android:textColor="#000000"
+		   	android:textSize="12dp"
+		   	android:text=""
+		    android:layout_marginTop="2dp" />
+        <TextView
+		   	android:id="@+id/lbl_invitor_name"
+		   	android:layout_width="wrap_content"
+		   	android:layout_height="wrap_content"
+		   	android:textColor="@color/darkGrey"
+		   	android:textSize="10dp"
+		   	android:text="@string/titleInvitorName"
+		   	android:layout_alignRight="@+id/lbl_invitor_invited"
+		   	android:gravity="center"
+		   	android:layout_below ="@+id/txt_invitor_tel"
+		   	android:layout_marginTop="2dp" />
+
+         <TextView
+             android:id="@+id/txt_invitor_name"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignBottom="@+id/lbl_invitor_name"
+             android:layout_toRightOf="@+id/lbl_invitor_name"
+             android:gravity="center"
+             android:text=""
+             android:textColor="@color/darkGrey"
+             android:textSize="12dp"
+             android:layout_marginLeft="10dp" />
+
+       	<TextView
+       	    android:id="@+id/lbl_invitor_amount"
+       	    android:layout_width="wrap_content"
+       	    android:layout_height="wrap_content"
+       	    android:layout_alignBottom="@+id/txt_invitor_name"
+       	    android:layout_centerHorizontal="true"
+       	    android:text="Amount:"
+       	    android:textColor="@color/darkGrey"
+       	    android:textSize="12dp" />
+       	<TextView
+       	    android:id="@+id/txt_invitor_amount"
+       	    android:layout_width="wrap_content"
+       	    android:layout_height="wrap_content"
+       	    android:layout_alignBottom="@+id/lbl_invitor_amount"
+       	    android:layout_toRightOf="@+id/lbl_invitor_amount"
+       	    android:text=""
+       	    android:textColor="@color/darkGrey"
+       	    android:textSize="12dp" 
+       	    android:layout_marginLeft="10dp"/>
+       	 <TextView
+		   	android:id="@+id/lbl_invitor_invited"
+		   	android:layout_width="wrap_content"
+		   	android:layout_height="wrap_content"
+		   	android:textColor="@color/darkGrey"
+		   	android:textSize="10dp"
+		   	android:text="@string/titleInvitorInvited"
+		   	android:gravity="center"
+		   	android:layout_below ="@+id/lbl_invitor_name"
+		   	android:layout_marginTop="2dp" />
+
+         <TextView
+             android:id="@+id/txt_invitor_invited"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignBottom="@+id/lbl_invitor_invited"
+             android:layout_toRightOf="@+id/lbl_invitor_invited"
+             android:gravity="center"
+             android:text=""
+             android:textColor="@color/darkGrey"
+             android:textSize="10dp"
+             android:layout_marginLeft="10dp" />
+         <TextView
+       	    android:id="@+id/lbl_invitor_paid"
+       	    android:layout_width="wrap_content"
+       	    android:layout_height="wrap_content"
+       	    android:layout_alignBottom="@+id/txt_invitor_invited"
+       	    android:layout_centerHorizontal="true"
+       	    android:layout_alignRight="@+id/lbl_invitor_amount"
+       	    android:text="Paid At:"
+       	    android:textColor="@color/darkGrey"
+       	    android:textSize="10dp" />
+       	<TextView
+       	    android:id="@+id/txt_invitor_paid"
+       	    android:layout_width="wrap_content"
+       	    android:layout_height="wrap_content"
+       	    android:layout_alignBottom="@+id/lbl_invitor_paid"
+       	    android:layout_toRightOf="@+id/lbl_invitor_paid"
+       	    android:text="Amount:"
+       	    android:textColor="@color/darkGrey"
+       	    android:textSize="10dp" 
+       	    android:layout_marginLeft="10dp"/>
+
+	</RelativeLayout>
+</RelativeLayout>

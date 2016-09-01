@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+	
+    <!-- Right or left Menu Panel -->
+
+    <FrameLayout
+        android:id="@+id/menuPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </FrameLayout>  
+      <!-- End -->
+
+    <LinearLayout
+        android:id="@+id/slidingPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white"
+        android:gravity="left"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/blue_bg" >
+
+          <View
+                android:id="@+id/header_vertical_divider_1"
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/menuViewButton" />
+
+           
+            <ImageView
+                android:id="@+id/menuViewButton"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:clickable="true"
+                android:contentDescription="@string/description"
+                android:src="@drawable/left_menu"
+                android:visibility="visible" 
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="10dp"/>
+
+           	<View
+                android:id="@+id/header_vertical_divider_2"
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toLeftOf="@+id/menuRightButton" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/title_project_add"
+                android:textColor="#ffffff" 
+                android:textSize="18dp"/>
+			
+            <ImageView
+                android:id="@+id/menuRightButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:clickable="true"
+                android:contentDescription="@string/description"
+                android:src="@drawable/icon_menu"
+                android:visibility="invisible" />
+        </RelativeLayout>
+        <ScrollView 
+            	android:layout_width="fill_parent"
+	        	android:layout_height="fill_parent" 
+	        	android:background="@drawable/sky"
+	        	android:scaleType="fitEnd" >
+        
+			<RelativeLayout
+			    android:id="@+id/slidingProjectAdd"
+	        	android:layout_width="fill_parent"
+	        	android:layout_height="wrap_content">
+			    <RelativeLayout
+		            android:id="@+id/btnPanelTop"
+		            android:layout_width="300dp"
+		            android:layout_height="40dp"
+		            android:layout_marginLeft="10dp"
+		            android:layout_marginRight="10dp"
+		            android:layout_marginTop = "30dp"
+		            android:background="@drawable/backgroundbuttonwhite"
+		            android:layout_centerHorizontal="true">
+		
+		            <EditText
+		                android:id="@+id/editProjectName"
+		                android:layout_width="fill_parent"
+		                android:layout_height="fill_parent"
+		                android:hint="@string/title_project_name"
+		                android:background="#ffffff"
+		                android:paddingLeft="10dp"
+		                android:textSize="14dp"
+		                android:textColorHint="@color/black"
+		                android:textColor="@color/black" />
+				 </RelativeLayout>
+				 <RelativeLayout
+		            android:id="@+id/rlProviderTelephoneProject"
+		            android:layout_width="300dp"
+		            android:layout_height="40dp"
+		            android:layout_marginLeft="10dp"
+		            android:layout_marginRight="10dp"
+		            android:layout_below="@+id/btnPanelTop"
+		            android:layout_centerInParent="true"
+		            android:layout_marginTop="10dp"
+		            android:background="@drawable/backgroundbuttonwhite"
+		            android:clickable="true">
+		        
+		            <EditText
+		                android:id="@+id/editProviderTelephoneProjectAdd"
+		                android:layout_width="fill_parent"
+		                android:layout_height="fill_parent"
+		                android:layout_alignParentTop="true"
+		                android:hint="@string/title_provider_telephone"
+		                android:background="#ffffff"
+		                android:textSize="14dp"
+		                android:textColor="@color/black"
+		                android:paddingLeft="10dp"
+		                android:inputType="phone"
+		                android:clickable="true"
+		                android:textColorHint="@color/black"
+		                android:paddingRight="20dp"/>
+		            <RelativeLayout 
+		                android:id="@+id/rlTelephoneBtn"
+		                android:layout_width="40dp"
+		                android:layout_height="40dp"
+		                android:layout_alignParentRight="true" >
+			            <Button
+			                android:id="@+id/addTelephoneBtn"
+			                android:layout_width="20dp"
+			                android:layout_height="20dp"
+			                android:layout_alignParentRight="true"
+	                		android:layout_centerVertical="true"
+			                android:background="@drawable/contacts" 
+			                android:clickable="false"/>
+			        </RelativeLayout>
+		         </RelativeLayout>
+	
+		         <RelativeLayout
+		            android:id="@+id/btnProjectCountry"
+		            android:layout_width="300dp"
+		            android:layout_height="50dp"
+		            android:layout_below="@+id/rlProviderTelephoneProject"
+		            android:layout_centerInParent="true"
+		            android:layout_marginLeft="10dp"
+		            android:layout_marginRight="10dp"
+		            android:layout_marginTop="10dp"
+		            android:clickable="true">
+					<TextView
+		                android:id="@+id/txt_country"
+		                android:layout_width="100dp"
+		                android:layout_height="40dp"
+		                android:layout_alignParentBottom="true"
+		                android:layout_alignParentLeft="true"
+		                android:gravity="left|center"
+		                android:text="@string/title_country" 
+		                android:textColor="@color/black"
+		                android:clickable="false"
+		                android:textSize="14dp"
+		                android:paddingLeft="10dp"/>
+		            <EditText
+		                android:id="@+id/editCountry"
+		                android:layout_width="fill_parent"
+		                android:layout_height="40dp"
+		                android:layout_centerInParent="true"
+		                android:layout_centerVertical="true"
+		                android:textSize="14dp"
+		                android:layout_toRightOf="@+id/txt_country"
+		                android:background="@drawable/backgroundbuttonwhite"
+						android:paddingLeft="10dp" 
+		                android:textColor="@color/black"
+		                android:clickable="true"
+		                android:focusable="false" />
+		            <RelativeLayout 
+		                android:id="@+id/rlCountryBtn"
+		                android:layout_width="40dp"
+		                android:layout_height="40dp"
+		                android:paddingRight="5dp"
+		                android:layout_centerInParent="true"
+		                android:layout_alignParentRight="true" >
+			            <Button
+			                android:id="@+id/addCountryBtn"
+			                android:layout_width="15dp"
+			                android:layout_height="20dp"
+							android:layout_alignParentRight="true"
+	                		android:layout_centerVertical="true"
+			                android:background="@drawable/down_48"
+			                android:clickable="false" />
+			         </RelativeLayout>
+				</RelativeLayout>
+				<RelativeLayout
+		            android:id="@+id/btnProjectAmount"
+		            android:layout_width="300dp"
+		            android:layout_height="40dp"
+		            android:layout_below="@+id/btnProjectCountry"
+		            android:layout_centerInParent="true"
+		            android:layout_marginLeft="10dp"
+		            android:layout_marginRight="10dp"
+		            android:layout_marginTop="10dp" >
+					<TextView
+		                android:id="@+id/txt_amount"
+		                android:layout_width="100dp"
+		                android:layout_height="40dp"
+		                android:layout_centerVertical="true"
+		              	android:gravity="left|center"
+		                android:text="@string/title_amount" 
+		                android:textColor="@color/black"
+		                android:textSize="14dp"
+		                android:paddingLeft="10dp"/>
+		
+		            <EditText
+		                android:id="@+id/editAmount"
+		                android:layout_width="fill_parent"
+		                android:layout_height="40dp"
+		                android:layout_centerInParent="true"
+		                android:layout_centerVertical="true"
+		                android:gravity="left|center"
+		                android:textSize="14dp"
+		                android:layout_toRightOf="@+id/txt_amount"
+		                android:background="@drawable/backgroundbuttonwhite"
+		                android:textColor="@color/black"
+		                android:inputType="phone" 
+		                android:paddingLeft="10dp"/>
+		        </RelativeLayout>
+	
+		        <RelativeLayout
+		            android:id="@+id/btnProjectMessage"
+		            android:layout_width="300dp"
+		            android:layout_height="100dp"
+		            android:layout_below="@+id/btnProjectAmount"
+		            android:layout_centerInParent="true"
+		            android:layout_marginLeft="10dp"
+		            android:layout_marginRight="10dp"
+		            android:layout_marginTop="10dp"
+		            >
+		
+		            <TextView
+		                android:id="@+id/txt_message"
+		                android:layout_width="100dp"
+		                android:layout_height="100dp"
+		                android:layout_centerVertical="true"
+		                android:gravity="left|center"
+		                android:text="@string/title_message" 
+		                android:textColor="@color/black"
+		                android:textSize="14dp"
+		                android:paddingLeft="10dp"/>
+		
+		            <EditText
+		                android:id="@+id/editMessage"
+		                android:layout_width="fill_parent"
+		                android:layout_height="100dp"
+		                android:layout_centerInParent="true"
+		                android:layout_centerVertical="true"
+		                android:textSize="14dp"
+		                android:layout_toRightOf="@+id/txt_message"
+		                android:textColor="@color/black" 
+		                android:background="@drawable/backgroundbuttonwhite" 
+		                android:paddingLeft="10dp"/>
+		          </RelativeLayout>
+	
+		          <RelativeLayout
+		            android:id="@+id/btnProjectExpired"
+		            android:layout_width="300dp"
+		            android:layout_height="40dp"
+		            android:layout_below="@+id/btnProjectMessage"
+		            android:layout_centerInParent="true"
+		            android:layout_marginLeft="10dp"
+		            android:layout_marginRight="10dp"
+		            android:layout_marginTop="10dp"
+		            android:clickable="true" >
+		
+		            <TextView
+		                android:id="@+id/txt_expired"
+		                android:layout_width="100dp"
+		                android:layout_height="40dp"
+		                android:layout_centerVertical="true"
+						android:gravity="left|center"
+		                android:text="@string/title_expired_date" 
+		                android:textColor="@color/black"
+		                android:clickable="false"
+		                android:textSize="14dp"
+		                android:paddingLeft="10dp"/>
+		
+		            <EditText
+		                android:id="@+id/editExpired"
+		                android:layout_width="fill_parent"
+		                android:layout_height="50dp"
+		                android:layout_centerInParent="true"
+		                android:layout_centerVertical="true"
+		                android:layout_toRightOf="@+id/txt_expired"
+		                android:textColor="@color/black"
+		                android:focusable="false"
+		                android:clickable="true"
+		                android:textSize="14dp"
+		                android:background="@drawable/backgroundbuttonwhite" 
+		                android:paddingLeft="10dp"/>
+		            <RelativeLayout 
+		                android:id="@+id/rlExpiredBtn"
+		                android:layout_width="40dp"
+		                android:layout_height="40dp"
+		                android:paddingRight="5dp"
+		                android:layout_centerInParent="true"
+		                android:layout_alignParentRight="true" >
+			            <Button
+			                android:id="@+id/addExpiredBtn"
+			                android:layout_width="15dp"
+			                android:layout_height="20dp"
+							android:layout_alignParentRight="true"
+	                		android:layout_centerVertical="true"
+			                android:background="@drawable/down_48" 
+			                android:clickable="false"/>
+			            </RelativeLayout>
+		          </RelativeLayout>
+	
+		        <RelativeLayout
+		            android:id="@+id/btnProjectInviter"
+		            android:layout_width="300dp"
+		            android:layout_height="100dp"
+		            android:layout_below="@+id/btnProjectExpired"
+		            android:layout_centerInParent="true"
+		            android:layout_marginLeft="10dp"
+		            android:layout_marginRight="10dp"
+		            android:layout_marginTop="10dp"
+		            android:clickable="true">
+		
+		            <TextView
+		                android:id="@+id/txt_inviter"
+		                android:layout_width="100dp"
+		                android:layout_height="100dp"
+		                android:layout_centerVertical="true"
+		                android:paddingLeft="10dp"
+		                android:text="@string/title_inviter" 
+		                android:gravity="left|center"
+		                android:textColor="@color/black"
+		                android:textSize="14dp"
+		                android:clickable="false"/>
+		
+		            <EditText
+		                android:id="@+id/editInviterProject"
+		                android:layout_width="fill_parent"
+		                android:layout_height="100dp"
+		                android:scrollbars="vertical" 
+						android:overScrollMode="always"
+		                android:layout_centerInParent="true"
+		                android:layout_centerVertical="true"
+		                android:layout_toRightOf="@+id/txt_inviter"
+		                android:textColor="@color/black" 
+		                android:focusable="true"
+		                android:paddingLeft="10dp"
+		                android:clickable="true"
+		                android:paddingRight="20dp"
+		                android:textSize="14dp"
+		                android:inputType="phone"
+		                android:background="@drawable/backgroundbuttonwhite"/>
+		        </RelativeLayout>
+		        <RelativeLayout
+		            android:id="@+id/btnAddMorePeople"
+		            android:layout_width="300dp"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/btnProjectInviter"
+		            android:layout_centerInParent="true"
+		            android:layout_marginLeft="10dp"
+		            android:layout_marginRight="10dp"
+		            android:layout_marginTop="10dp"
+		            android:clickable="true">
+				  <TextView
+		                android:id="@+id/addInviterTxt"
+		                android:layout_width="wrap_content"
+		                android:layout_height="20dp"
+		                android:layout_centerVertical="true"
+						android:gravity="left|center"
+		                android:text="@string/title_project_projectAdd"
+		                android:textColor="@color/blue"
+		                android:clickable="true"
+		                android:textSize="14dp"
+		                android:layout_alignParentRight="true"
+		                android:paddingLeft="10dp"/>
+				</RelativeLayout>
+		        <RelativeLayout
+		            android:id="@+id/relAddButton"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/btnAddMorePeople"
+		            android:layout_centerInParent="true"
+		            android:layout_marginTop="10dp"
+		            android:clickable="true">
+					<Button
+				             android:id="@+id/btnNow"
+				             android:layout_width="100dp"
+				             android:layout_height="40dp"
+				             android:layout_centerVertical="true"
+				             android:text="@string/title_add" 
+				             android:layout_centerInParent="true"
+				             android:textColor="@color/white" 
+				             android:clickable="false"
+				             android:focusable="false"
+				             android:background="@drawable/button_click"/>
+		        </RelativeLayout>
+		    </RelativeLayout>
+		</ScrollView>
+    </LinearLayout>
+
+</FrameLayout>

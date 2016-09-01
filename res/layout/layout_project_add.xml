@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+	
+    <!-- Right or left Menu Panel -->
+
+    <FrameLayout
+        android:id="@+id/menuPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </FrameLayout>  
+      <!-- End -->
+
+    <LinearLayout
+        android:id="@+id/slidingPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white"
+        android:gravity="left"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/blue_bg" >
+
+            <View
+                android:id="@+id/header_vertical_divider_1"
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/menuViewButton"
+                android:background="@drawable/engraved_bg" />
+
+            <ImageView
+                android:id="@+id/menuViewButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:clickable="true"
+                android:contentDescription="@string/description"
+                android:src="@drawable/icon_menu"
+                android:visibility="visible" />
+
+            <View
+                android:id="@+id/header_vertical_divider_2"
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toLeftOf="@+id/menuRightButton"
+                android:background="@drawable/engraved_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/title_project_add"
+                android:textColor="#ffffff" />
+
+            <View
+                android:id="@+id/header_vertical_divider_3"
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toLeftOf="@+id/menuRightButton"
+                android:background="@drawable/engraved_bg" />
+
+            <ImageView
+                android:id="@+id/menuRightButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:clickable="true"
+                android:contentDescription="@string/description"
+                android:src="@drawable/icon_menu"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnPanelTop"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#ffffff" >
+
+            <EditText
+                android:id="@+id/editProjectName"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:hint="@string/title_project_name"
+                android:padding="0dp" />
+
+            <EditText
+                android:id="@+id/editProviderTelephone"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/editProjectName"
+                android:layout_centerInParent="true"
+                android:ems="10"
+                android:hint="@string/title_provider_telephone"
+                android:padding="0dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnProjectCountry"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/btnPanelTop"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#ffffff" >
+
+            <TextView
+                android:id="@+id/txt_country"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:padding="0dp"
+                android:text="@string/title_country" />
+
+            <EditText
+                android:id="@+id/editCountry"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/txt_country"
+                android:padding="0dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnProjectAmount"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/btnPanelTop"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#ffffff" >
+
+            <TextView
+                android:id="@+id/txt_amoount"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:padding="0dp"
+                android:text="@string/title_country" />
+
+            <EditText
+                android:id="@+id/editAmount"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/txt_amoount"
+                android:padding="0dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnProjectMessage"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/btnPanelTop"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#ffffff" >
+
+            <TextView
+                android:id="@+id/txt_message"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:padding="0dp"
+                android:text="@string/title_message" />
+
+            <EditText
+                android:id="@+id/editMessage"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/txt_message"
+                android:padding="0dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnProjectExpired"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/btnPanelTop"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#ffffff" >
+
+            <TextView
+                android:id="@+id/txt_expired"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:padding="0dp"
+                android:text="@string/title_expired_date" />
+
+            <EditText
+                android:id="@+id/editExpired"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/txt_expired"
+                android:padding="0dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnProjectInviter"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/btnPanelTop"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#ffffff" >
+
+            <TextView
+                android:id="@+id/txt_inviter"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:padding="0dp"
+                android:text="@string/title_inviter" />
+
+            <EditText
+                android:id="@+id/editInviter"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/txt_inviter"
+                android:padding="0dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/btnProjectInviter"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_signin_bg" >
+			<Button
+		             android:id="@+id/btnNow"
+		             android:layout_width="100dp"
+		             android:layout_height="40dp"
+		             android:layout_centerVertical="true"
+		             android:text="@string/title_add" 
+		             android:background="#ffffff" 
+		             android:layout_centerInParent="true"
+		             android:textColor="#F00"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>

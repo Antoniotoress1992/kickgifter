@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout android:id="@+id/rl_top_1"
+        android:layout_width="fill_parent"
+        android:layout_height="78dp"
+        android:layout_centerVertical="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="7dp">
+        <RelativeLayout android:id="@+id/rl_first_column"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            
+	        <TextView
+			   	android:id="@+id/txt_project_name"
+			   	android:layout_width="wrap_content"
+			   	android:layout_height="wrap_content"
+			   	android:textColor="#000000"
+			   	android:textSize="14dp"
+			   	android:text="123"
+			   	android:gravity="center" />
+	
+		   	<TextView
+		   	    android:id="@+id/txt_project_message"
+		   	    android:layout_width="wrap_content"
+		   	    android:layout_height="wrap_content"
+		   	    android:layout_below="@+id/txt_project_name"
+		   	    android:gravity="left"
+		   	    android:text=""
+		   	    android:textColor="@color/darkGrey"
+		   	    android:textSize="12dp" />
+		   	<TextView
+		   	    android:id="@+id/lbl_project_amount"
+		   	    android:layout_width="wrap_content"
+		   	    android:layout_height="wrap_content"
+		   	    android:layout_below="@+id/txt_project_message"
+		   	    android:gravity="center"
+		   	    android:text="@string/title_project_amount"
+		   	    android:textColor="@color/darkGrey"
+		   	    android:textSize="12dp"
+		   	    android:layout_centerVertical="true" />
+		   	<TextView
+		   	    android:id="@+id/txt_project_amount"
+		   	    android:layout_width="wrap_content"
+		   	    android:layout_height="wrap_content"
+		   	    android:layout_below="@+id/txt_project_message"
+		   	    android:gravity="left"
+		   	    android:layout_toRightOf="@+id/lbl_project_amount"
+		   	    android:text=""
+		   	    android:textColor="@color/darkGrey"
+		   	    android:layout_marginLeft="5dp"
+		   	    android:textSize="12dp" />
+		   
+		    <TextView
+		   	    android:id="@+id/lbl_project_expired"
+		   	    android:layout_width="wrap_content"
+		   	    android:layout_height="wrap_content"
+		   	    android:layout_below="@+id/lbl_project_amount"
+		   	    android:gravity="center"
+		   	    android:text="@string/titleProjectExpired"
+		   	    android:textColor="@color/darkGrey"
+		   	    android:textSize="12dp"
+		   	    android:layout_centerVertical="true" />
+		    <TextView
+		   	    android:id="@+id/txt_project_expired"
+		   	    android:layout_width="wrap_content"
+		   	    android:layout_height="wrap_content"
+		   	    android:layout_below="@+id/txt_project_amount"
+		   	    android:layout_marginLeft="5dp"
+		   	    android:layout_toRightOf="@+id/lbl_project_expired"
+		   	    android:gravity="center"
+		   	    android:text=""
+				android:textColor="@color/darkGrey"
+		   	    android:textSize="12dp"
+		   	    android:layout_centerVertical="true" />
+		</RelativeLayout>
+
+		<RelativeLayout
+		    android:id="@+id/rl_second_column"
+		    android:layout_width="150dp"
+		    android:layout_height="fill_parent"
+		    android:layout_centerInParent="true"
+		    android:layout_toRightOf="@+id/rl_first_column"
+		    android:paddingTop="36dp" >
+
+		    <TextView
+		   	    android:id="@+id/lbl_project_crowded"
+		   	    android:layout_width="wrap_content"
+		   	    android:layout_height="wrap_content"
+		   	    android:gravity="center"
+		   	    android:text="@string/titleProjectCrowded"
+		   	    android:textColor="@color/darkGrey"
+		   	    android:textSize="12dp"
+		   	    android:layout_centerHorizontal="true" />
+		    <TextView
+		   	    android:id="@+id/txt_project_crowded"
+		   	    android:layout_width="wrap_content"
+		   	    android:layout_height="wrap_content"
+		   	    android:layout_marginLeft="5dp"
+		   	    android:layout_toRightOf="@+id/lbl_project_crowded"
+		   	    android:gravity="center"
+		   	    android:text=""
+		   	    android:textColor="@color/darkGrey"
+		   	    android:textSize="12dp"
+		   	    android:layout_centerHorizontal="true" />
+		</RelativeLayout>
+	    <RelativeLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerInParent="true">
+	       <ImageView
+		       android:id="@+id/img_phone_number1"
+		       android:layout_width="20dp"
+		       android:layout_height="20dp"
+		       android:background="@drawable/iconcheck" />
+		</RelativeLayout>
+	</RelativeLayout>
+</LinearLayout>

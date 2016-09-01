@@ -1,0 +1,199 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sky"
+    tools:context=".Start" >
+
+	<RelativeLayout
+            android:id="@+id/menuPanelBackContact"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/blue_bg" >
+
+             <RelativeLayout 
+		        android:id="@+id/menuPanelBack"
+		        android:layout_width="50dp"
+		        android:layout_height="50dp"
+		        android:background="@drawable/blue_bg">
+		         <ImageView
+			       android:id="@+id/img_phone_number1"
+			       android:layout_width="20dp"
+			       android:layout_height="20dp"
+			       android:layout_centerVertical="true"
+			       android:layout_marginLeft="15dp"
+			       android:background="@drawable/back_button" />
+		    </RelativeLayout>
+		    <TextView
+		           android:layout_width="wrap_content"
+		           android:layout_height="wrap_content"
+		           android:layout_centerVertical="true"
+		           android:text="@string/title_bank_transfer"
+		           android:layout_centerHorizontal="true"
+		           android:textSize="18dp"
+		           android:textColor="#ffffff"/>
+    </RelativeLayout>
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menuPanelBackContact" >
+		
+        <RelativeLayout
+            android:id="@+id/rlBankTransfer"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+	
+            <RelativeLayout
+                android:id="@+id/signup_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="50dp" 
+                >
+                
+				<RelativeLayout
+		            android:id="@+id/rlPanelBankTransfer"
+		            android:layout_width="fill_parent"
+		            android:layout_height="50dp"
+		            android:layout_marginLeft="10dp"
+		            android:layout_marginRight="10dp"
+		            android:layout_marginTop = "10dp">
+		
+		            <TextView
+		                android:id="@+id/txtGiftAmount"
+		                android:layout_width="wrap_content"
+		                android:layout_height="fill_parent"
+		                android:layout_alignParentTop="true"
+		                android:layout_centerInParent="true"
+		                android:text="@string/title_gift_amount"
+		                android:padding="0dp" 
+		                android:textSize="18dp"
+		                android:textColor="@color/blue"/>
+			   </RelativeLayout>
+				<RelativeLayout
+		            android:id="@+id/rlPanelBankAvailable"
+		            android:layout_width="wrap_content"
+		            android:layout_height="50dp"
+		            android:layout_marginLeft="10dp"
+		            android:layout_marginRight="10dp"
+		            android:layout_centerInParent="true"
+		            android:layout_below="@+id/rlPanelBankTransfer">
+		
+		            <TextView
+		                android:id="@+id/txtBankAvailable"
+		                android:layout_width="wrap_content"
+		                android:layout_height="fill_parent"
+		                android:layout_alignParentTop="true"
+		                android:text="@string/title_available_amount"
+		                android:padding="0dp" 
+		                android:textSize="18dp"
+		                android:textColor="@color/black"/>
+		            <TextView
+		                android:id="@+id/txtBankAvailableAmount"
+		                android:layout_width="wrap_content"
+		                android:layout_height="fill_parent"
+		                android:layout_alignParentTop="true"
+		                android:text=""
+		                android:layout_marginLeft="10dp"
+		                android:padding="0dp" 
+		                android:textSize="18dp"
+		                android:layout_toRightOf="@+id/txtBankAvailable"
+		                android:textColor="@color/black"/>
+			   </RelativeLayout>
+				<RelativeLayout
+		            android:id="@+id/btnPanelAmount"
+		            android:layout_width="fill_parent"
+		            android:layout_height="50dp"
+		            android:layout_marginLeft="10dp"
+		            android:layout_marginRight="10dp"
+		            android:layout_marginTop = "10dp"
+		            android:background="@drawable/backgroundbuttonwhite"
+		            android:layout_below="@+id/rlPanelBankAvailable">
+					<TextView
+		                android:id="@+id/txt_giftAmount"
+		                android:layout_width="100dp"
+		                android:layout_height="50dp"
+		                android:layout_alignParentBottom="true"
+		                android:layout_alignParentLeft="true"
+		                android:background="#ffffff"
+		                android:gravity="left|center"
+		                android:textSize="14dp"
+		                android:text="@string/title_amount" 
+		                android:textColor="@color/black"
+		                android:paddingLeft="10dp"/>
+		            <EditText
+		                android:id="@+id/editGiftAmount"
+		                android:layout_width="fill_parent"
+		                android:layout_height="fill_parent"
+		                android:layout_alignParentTop="true"
+		                android:layout_centerInParent="true"
+		                android:layout_toRightOf="@+id/txt_giftAmount"
+		                android:background="#ffffff"
+		                android:padding="0dp" 
+		                android:inputType="phone"/>
+				 </RelativeLayout>
+
+				 <RelativeLayout
+				     android:id="@+id/btnPanelBank"
+				     android:layout_width="fill_parent"
+				     android:layout_height="150dp"
+				     android:layout_marginLeft="10dp"
+				     android:layout_marginRight="10dp"
+				     android:background="@drawable/backgroundbuttonwhite" 
+				     android:layout_below="@+id/btnPanelAmount"
+				     android:layout_marginTop="10dp">
+		        	<TextView
+		                android:id="@+id/txt_country"
+		                android:layout_width="100dp"
+		                android:layout_height="fill_parent"
+		                android:layout_alignParentBottom="true"
+		                android:layout_alignParentLeft="true"
+		                android:background="#ffffff"
+		                android:text="@string/title_bank_info"
+		                android:gravity="left|center"
+		                android:paddingLeft="10dp"
+		                android:textColor="@color/black"/>
+		            <EditText
+		                android:id="@+id/editBankTransfer"
+		                android:layout_width="fill_parent"
+		                android:layout_height="fill_parent"
+		                android:layout_alignParentTop="true"
+		                android:layout_centerHorizontal="true"
+		                android:background="#ffffff"
+		                android:layout_toRightOf="@+id/txt_country"
+		                
+		                android:padding="0dp" />
+
+		         </RelativeLayout>
+		          <RelativeLayout 
+			        android:id="@+id/btnPanel"
+			        android:layout_width="wrap_content"
+			        android:layout_height="40dp"
+			       	android:layout_centerInParent="true"
+			        android:layout_marginBottom="20dp"
+			        android:layout_below = "@+id/btnPanelBank" 
+			        android:layout_marginTop="20dp">
+			        <Button
+			             android:id="@+id/btnBankSend"
+			             android:layout_width="100dp"
+			             android:layout_height="40dp"
+			             android:layout_centerVertical="true"
+			             android:text="@string/title_bank_send" 
+			             android:background="@drawable/button_click"
+			             android:gravity="right|center_vertical" 
+			             android:textColor="@color/white"
+			             android:paddingRight="30dp"/>
+					 <ImageView
+			            android:id="@+id/imgShopping"
+			            android:layout_width="20dp"
+			            android:layout_height="20dp"
+			            android:background="@drawable/invoice" 
+			            android:layout_marginLeft="10dp"
+			            android:layout_centerVertical="true"/>
+				</RelativeLayout>
+			</RelativeLayout>
+			
+        </RelativeLayout>
+	</ScrollView>
+</RelativeLayout>
